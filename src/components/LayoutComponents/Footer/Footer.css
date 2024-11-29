@@ -2,6 +2,7 @@
   padding: 2rem 0;
   text-align: center;
   border-top: 1px solid #e0e0e0;
+  background-color: #f8f8f8;
 }
 
 .footer-links {
@@ -24,6 +25,22 @@
   color: #666;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2e8b57;
+}
+
 .copyright {
   color: #666;
   font-size: 0.8rem;
@@ -32,8 +49,22 @@
 @media (max-width: 768px) {
   .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    padding: 0 1rem;
+  }
+
+  .footer-links a {
+    position: relative;
+    padding: 0 0.5rem;
+  }
+
+  .footer-links a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -0.75rem;
+    color: #666;
   }
 
   .separator {

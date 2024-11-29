@@ -1,9 +1,15 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import path from "path";
 
-import react from '@astrojs/react';
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+  integrations: [react()],
+  vite: {
+    resolve: {
+      alias: {
+        "@images": path.resolve("./public/images"),
+        "@components": path.resolve("./src/components"),
+      },
+    },
+  },
 });

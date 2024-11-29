@@ -1,0 +1,112 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("@images/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: white;
+  color: #000;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #2e8b57;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    background: none;
+  }
+
+  .hero-overlay {
+    position: static;
+    background: none;
+    display: block;
+  }
+
+  .hero-content {
+    color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    display: none;
+  }
+
+  .hero-content::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 100%; /* Creates a square aspect ratio */
+    background-image: url("@images/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  .hero-button {
+    background-color: #000;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 1rem;
+  }
+
+  .hero-button:hover {
+    background-color: #2e8b57;
+  }
+}

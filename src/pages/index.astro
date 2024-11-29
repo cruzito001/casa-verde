@@ -1,8 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/MainComponents/HeroSection/HeroSection';
 ---
 
-<Layout title="Casa Verde - Tu tienda de plantas" description="Bienvenido a Casa Verde, tu tienda en línea para plantas, macetas y accesorios de jardinería.">
-	<h1>Bienvenido a Casa Verde</h1>
+<Layout 
+  title="Casa Verde - Tu tienda de plantas" 
+  description="Bienvenido a Casa Verde, tu tienda en línea para plantas, macetas y accesorios de jardinería."
+>
+  <HeroSection client:load />
 </Layout>
 
