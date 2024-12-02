@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/MainComponents/HeroSection/HeroSection';
+import BestSellers from '../components/MainComponents/BestSellers/BestSellers';
 ---
 
 <Layout 
@@ -8,5 +9,6 @@ import HeroSection from '../components/MainComponents/HeroSection/HeroSection';
   description="Bienvenido a Casa Verde, tu tienda en línea para plantas, macetas y accesorios de jardinería."
 >
   <HeroSection client:load />
+  <BestSellers client:load />
 </Layout>
 

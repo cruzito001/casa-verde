@@ -7,7 +7,6 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        "@plantas": path.resolve("./public/images/plantas"),
         "@images": path.resolve("./public/images"),
         "@components": path.resolve("./src/components"),
       },
