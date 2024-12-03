@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ExteriorHeader from '../components/HeaderComponents/ExteriorHeader';
+import ProductGrid from '../components/CatalogComponents/ProductGrid';
+import { plantasExterior } from '../data/plantas-exterior';
+
+---
+
+<Layout 
+  title="Plantas de Exterior - Casa Verde" 
+  description="Explora nuestra colección de plantas de exterior en Casa Verde. Encuentra la planta perfecta para tu jardín o terraza."
+>
+  <ExteriorHeader client:load />
+  <div class="catalogContainer">
+    <h2 class="sectionTitle">Nuestras Plantas de Exterior</h2>
+    <ProductGrid products={plantasExterior} client:load />
+  </div>
+</Layout>
+
+<style>
+  .catalogContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-family: "Bebas-Title", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  }
+</style>
+
