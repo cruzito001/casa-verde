@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GuideHeader from '../components/GuideComponents/GuideHeader';
+import GuideLighting from '../components/GuideComponents/GuideLighting';
+import GuideWatering from '../components/GuideComponents/GuideWatering';
+import GuideTemperature from '../components/GuideComponents/GuideTemperature';
+import GuideVentilation from '../components/GuideComponents/GuideVentilation';
+import GuideFertilizing from '../components/GuideComponents/GuideFertilizing';
+import GuidePruning from '../components/GuideComponents/GuidePruning';
+---
+
+<Layout 
+  title="Guía Completa para el Cuidado de Plantas - Casa Verde" 
+  description="Aprende todo lo que necesitas saber sobre el cuidado de tus plantas con nuestra guía completa. Desde iluminación hasta poda, te cubrimos todo."
+>
+  <GuideHeader client:load />
+  <GuideLighting client:load />
+  <GuideWatering client:load />
+  <GuideTemperature client:load />
+  <GuideVentilation client:load />
+  <GuideFertilizing client:load />
+  <GuidePruning client:load />
+</Layout>
+
