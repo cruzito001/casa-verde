@@ -1,5 +1,5 @@
 import React from "react";
-import "./BestPotsSellers.css";
+import styles from "./BestPotsSellers.module.css";
 
 interface Product {
   id: number;
@@ -14,51 +14,51 @@ const products: Product[] = [
     id: 1,
     name: "MACETA ALICE NATURAL",
     price: 15.95,
-    image: "@images/macetas/maceta-alice.jpg",
+    image: "../../../public/images/macetas/maceta-alice.jpg",
   },
   {
     id: 2,
     name: "MACETA AURA VERDE DARK",
     price: 12.95,
-    image: "@images/macetas/maceta-aura-verde.jpg",
+    image: "../../../public/images/macetas/maceta-aura-verde.jpg",
   },
   {
     id: 3,
     name: "MACETA AURA TERRACOTA",
     price: 12.95,
-    image: "@images/macetas/maceta-aura-terracota.jpg",
+    image: "../../../public/images/macetas/maceta-aura-terracota.jpg",
   },
   {
     id: 4,
     name: "MACETA CUBO",
     price: 13.95,
-    image: "@images/macetas/maceta-cubo.jpg",
+    image: "../../../public/images/macetas/maceta-cubo.jpg",
   },
 ];
 
 const BestPotsSellers: React.FC = () => {
   return (
-    <section className="bestsellers">
-      <h2 className="bestsellers-title">NUESTRAS MACETAS MÁS TOP</h2>
-      <div className="products-grid">
+    <section className={styles.container}>
+      <h2 className={styles.title}>NUESTRAS MACETAS MÁS TOP</h2>
+      <div className={styles.grid}>
         {products.map((product) => (
-          <div key={product.id} className="product-card">
+          <div key={product.id} className={styles.card}>
             {product.isSoldOut && (
-              <span className="sold-out-badge">AGOTADO</span>
+              <span className={styles.soldOutBadge}>AGOTADO</span>
             )}
-            <div className="image-container">
+            <div className={styles.imageContainer}>
               <img
                 src={product.image}
                 alt={product.name}
-                className="product-image"
+                className={styles.image}
               />
             </div>
-            <div className="product-info">
-              <h3 className="product-name">{product.name}</h3>
+            <div className={styles.info}>
+              <h3 className={styles.name}>{product.name}</h3>
               <div>
-                <p className="product-price">${product.price.toFixed(2)}</p>
+                <p className={styles.price}>${product.price.toFixed(2)}</p>
                 <button
-                  className={`add-to-cart-btn ${product.isSoldOut ? "sold-out" : ""}`}
+                  className={`${styles.addToCartBtn} ${product.isSoldOut ? styles.soldOut : ""}`}
                   disabled={product.isSoldOut}
                 >
                   {product.isSoldOut ? "Agotado" : "Añadir al carrito"}
@@ -67,6 +67,11 @@ const BestPotsSellers: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className={styles.seeAllContainer}>
+        <a href="/macetas" className={styles.seeAllBtn}>
+          Ver todas
+        </a>
       </div>
     </section>
   );
