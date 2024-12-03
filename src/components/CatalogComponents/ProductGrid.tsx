@@ -15,22 +15,25 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
             <span className={styles.soldOutBadge}>AGOTADO</span>
           )}
           <div className={styles.imageContainer}>
-            <img
-              src={product.image}
-              alt={product.name}
-              className={styles.image}
-            />
+            <a href={`/producto/${product.id}`}>
+              <img
+                src={product.image}
+                alt={product.name}
+                className={styles.image}
+                style={{ viewTransitionName: `product-image-${product.id}` }}
+              />
+            </a>
           </div>
           <div className={styles.info}>
             <h3 className={styles.name}>{product.name}</h3>
             <div>
-              <p className={styles.price}>${product.price.toFixed(2)}</p>
-              <button
+              <p className={styles.price}>MX${product.price.toFixed(2)}</p>
+              <a
+                href={`/producto/${product.id}`}
                 className={`${styles.addToCartBtn} ${product.isSoldOut ? styles.soldOut : ""}`}
-                disabled={product.isSoldOut}
               >
-                {product.isSoldOut ? "AGOTADO" : "AÑADIR AL CARRITO"}
-              </button>
+                {product.isSoldOut ? "AGOTADO" : "VER DETALLES"}
+              </a>
             </div>
           </div>
         </div>
