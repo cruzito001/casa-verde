@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/MainComponents/HeroSection/HeroSection';
 import BestSellers from '../components/MainComponents/BestSellers/BestSellers';
+import BestPotsSellers from '../components/MainComponents/BestPotsSellers/BestPotsSellers';
 ---
 
 <Layout 
@@ -10,5 +11,6 @@ import BestSellers from '../components/MainComponents/BestSellers/BestSellers';
 >
   <HeroSection client:load />
   <BestSellers client:load />
+  <BestPotsSellers client:load />
 </Layout>
 
