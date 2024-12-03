@@ -6,18 +6,18 @@
   background-color: #f8f8f8;
 }
 
-.footer-links {
+.footerLinks {
   margin-bottom: 1rem;
 }
 
-.footer-links a {
+.footerLinks a {
   color: #333;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footerLinks a:hover {
   color: #2e8b57;
 }
 
@@ -26,19 +26,19 @@
   color: #666;
 }
 
-.social-icons {
+.socialIcons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.social-icons a {
+.socialIcons a {
   color: #333;
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.socialIcons a:hover {
   color: #2e8b57;
 }
 
@@ -48,7 +48,7 @@
 }
 
 @media (max-width: 768px) {
-  .footer-links {
+  .footerLinks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -56,12 +56,12 @@
     padding: 0 1rem;
   }
 
-  .footer-links a {
+  .footerLinks a {
     position: relative;
     padding: 0 0.5rem;
   }
 
-  .footer-links a:not(:last-child)::after {
+  .footerLinks a:not(:last-child)::after {
     content: "|";
     position: absolute;
     right: -0.75rem;

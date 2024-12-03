@@ -1,5 +1,5 @@
 import React from "react";
-import "./BestSellers.css";
+import styles from "./BestSellers.module.css";
 
 interface Product {
   id: number;
@@ -39,27 +39,27 @@ const products: Product[] = [
 
 const BestSellers: React.FC = () => {
   return (
-    <section className="bestsellers">
-      <h2 className="bestsellers-title">PLANTAS MÁS VENDIDAS</h2>
-      <div className="products-grid">
+    <section className={styles.container}>
+      <h2 className={styles.title}>PLANTAS MÁS VENDIDAS</h2>
+      <div className={styles.grid}>
         {products.map((product) => (
-          <div key={product.id} className="product-card">
+          <div key={product.id} className={styles.card}>
             {product.isSoldOut && (
-              <span className="sold-out-badge">AGOTADO</span>
+              <span className={styles.soldOutBadge}>AGOTADO</span>
             )}
-            <div className="image-container">
+            <div className={styles.imageContainer}>
               <img
                 src={product.image}
                 alt={product.name}
-                className="product-image"
+                className={styles.image}
               />
             </div>
-            <div className="product-info">
-              <h3 className="product-name">{product.name}</h3>
+            <div className={styles.info}>
+              <h3 className={styles.name}>{product.name}</h3>
               <div>
-                <p className="product-price">${product.price.toFixed(2)}</p>
+                <p className={styles.price}>${product.price.toFixed(2)}</p>
                 <button
-                  className={`add-to-cart-btn ${product.isSoldOut ? "sold-out" : ""}`}
+                  className={`${styles.addToCartBtn} ${product.isSoldOut ? styles.soldOut : ""}`}
                   disabled={product.isSoldOut}
                 >
                   {product.isSoldOut ? "Agotado" : "Añadir al carrito"}

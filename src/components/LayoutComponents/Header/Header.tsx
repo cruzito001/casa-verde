@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 interface SubMenuItem {
   name: string;
@@ -58,11 +58,11 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="header">
-      <div className="header-top">
-        <div className="mobile-left">
+    <header className={styles.container}>
+      <div className={styles.top}>
+        <div className={styles.mobileLeft}>
           <button
-            className="menu-toggle"
+            className={styles.menuToggle}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -71,13 +71,13 @@ const Header: React.FC = () => {
             <span></span>
           </button>
         </div>
-        <a href="/" className="logo">
+        <a href="/" className={styles.logo}>
           <h1>
-            CASA <span className="verde">VERDE</span>
+            CASA <span className={styles.verde}>VERDE</span>
           </h1>
         </a>
-        <div className="header-icons">
-          <div className="search-icon">
+        <div className={styles.icons}>
+          <div className={styles.searchIcon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </div>
-          <div className="user-icon desktop-only">
+          <div className={`${styles.userIcon} ${styles.desktopOnly}`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
               <circle cx="12" cy="7" r="4" />
             </svg>
           </div>
-          <div className="cart-icon">
+          <div className={styles.cartIcon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -122,9 +122,9 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <nav className={`main-nav ${isMenuOpen ? "is-open" : ""}`}>
+      <nav className={`${styles.nav} ${isMenuOpen ? styles.isOpen : ""}`}>
         <button
-          className="close-menu"
+          className={styles.closeMenu}
           onClick={handleCloseMenu}
           aria-label="Close menu"
         >
@@ -134,16 +134,18 @@ const Header: React.FC = () => {
           {menuItems.map((item) => (
             <li
               key={item.name}
-              className={`menu-item ${item.subItems ? "has-submenu" : ""}`}
+              className={`${styles.menuItem} ${item.subItems ? styles.hasSubmenu : ""}`}
               onMouseEnter={() => setActiveMenuItem(item.name)}
               onMouseLeave={() => setActiveMenuItem(null)}
             >
               <a href={item.url}>
                 {item.name}
-                {item.subItems && <span className="dropdown-indicator">▾</span>}
+                {item.subItems && (
+                  <span className={styles.dropdownIndicator}>▾</span>
+                )}
               </a>
               {item.subItems && activeMenuItem === item.name && (
-                <ul className="sub-menu">
+                <ul className={styles.subMenu}>
                   {item.subItems.map((subItem) => (
                     <li key={subItem.name}>
                       <a href={subItem.url}>{subItem.name}</a>
@@ -153,8 +155,8 @@ const Header: React.FC = () => {
               )}
             </li>
           ))}
-          <li className="mobile-only login-item">
-            <a href="/login" className="login-link">
+          <li className={`${styles.mobileOnly} ${styles.loginItem}`}>
+            <a href="/login" className={styles.loginLink}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

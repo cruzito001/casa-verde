@@ -1,10 +1,10 @@
-.header {
+.container {
   font-family: "Bebas-Text", sans-serif;
   padding: 10px 0;
   background-color: #ffffff;
 }
 
-.header-top {
+.top {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -39,29 +39,29 @@
   color: #2e8b57;
 }
 
-.header-icons {
+.icons {
   display: flex;
   gap: 15px;
   margin-left: auto;
 }
 
-.search-icon {
+.searchIcon {
   margin-right: auto;
 }
 
-.search-icon svg,
-.user-icon svg,
-.cart-icon svg {
+.searchIcon svg,
+.userIcon svg,
+.cartIcon svg {
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
 
-.main-nav {
+.nav {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.main-nav ul {
+.nav ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
@@ -69,12 +69,12 @@
   margin: 0;
 }
 
-.main-nav ul li {
+.nav ul li {
   position: relative;
   padding: 10px 25px;
 }
 
-.main-nav ul li::after {
+.nav ul li::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -85,11 +85,11 @@
   display: none;
 }
 
-.main-nav ul li:hover::after {
+.nav ul li:hover::after {
   display: block;
 }
 
-.main-nav ul li a {
+.nav ul li a {
   font-family: "Bebas-Text", sans-serif;
   text-decoration: none;
   color: #333;
@@ -101,12 +101,12 @@
   text-transform: uppercase;
 }
 
-.dropdown-indicator {
+.dropdownIndicator {
   font-size: 0.8em;
   margin-left: 4px;
 }
 
-.sub-menu {
+.subMenu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -118,31 +118,31 @@
   padding: 10px 0;
 }
 
-.main-nav ul li:hover .sub-menu {
+.nav ul li:hover .subMenu {
   display: block;
 }
 
-.sub-menu li {
+.subMenu li {
   padding: 10px 20px;
 }
 
-.sub-menu li a {
+.subMenu li a {
   font-family: "Bebas-Text", sans-serif;
   color: #333;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
-.sub-menu li a:hover {
+.subMenu li a:hover {
   color: #2e8b57;
 }
 
-.mobile-left,
-.mobile-only {
+.mobileLeft,
+.mobileOnly {
   display: none;
 }
 
-.menu-toggle {
+.menuToggle {
   display: none;
   background: none;
   border: none;
@@ -150,7 +150,7 @@
   padding: 0;
 }
 
-.menu-toggle span {
+.menuToggle span {
   display: block;
   width: 25px;
   height: 2px;
@@ -159,12 +159,12 @@
   transition: all 0.3s ease;
 }
 
-.close-menu {
+.closeMenu {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .header {
+  .container {
     position: fixed;
     top: 0;
     left: 0;
@@ -177,17 +177,17 @@
     justify-content: center;
   }
 
-  .mobile-left,
-  .menu-toggle,
-  .mobile-only {
+  .mobileLeft,
+  .menuToggle,
+  .mobileOnly {
     display: block;
   }
 
-  .desktop-only {
+  .desktopOnly {
     display: none;
   }
 
-  .header-top {
+  .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,7 +201,7 @@
     transform: none;
   }
 
-  .mobile-left {
+  .mobileLeft {
     order: 1;
   }
 
@@ -209,7 +209,7 @@
     order: 2;
   }
 
-  .header-icons {
+  .icons {
     order: 3;
     margin: 0;
   }
@@ -221,7 +221,7 @@
     gap: 5px;
   }
 
-  .main-nav {
+  .nav {
     position: fixed;
     top: 60px;
     left: -100%;
@@ -234,57 +234,57 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   }
 
-  .main-nav.is-open {
+  .nav.isOpen {
     left: 0;
   }
 
-  .main-nav ul {
+  .nav ul {
     flex-direction: column;
     padding: 20px;
     height: 100%;
     overflow-y: auto;
   }
 
-  .main-nav ul li {
+  .nav ul li {
     padding: 15px 0;
     border-bottom: 1px solid #e0e0e0;
   }
 
-  .main-nav ul li::after {
+  .nav ul li::after {
     display: none;
   }
 
-  .sub-menu {
+  .subMenu {
     position: static;
     box-shadow: none;
     padding-left: 20px;
   }
 
-  .login-item {
+  .loginItem {
     margin-top: auto;
     padding: 20px 0 !important;
     border-top: 1px solid #e0e0e0;
   }
 
-  .login-link {
+  .loginLink {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  .login-link svg {
+  .loginLink svg {
     width: 20px;
     height: 20px;
   }
 
-  .menu-toggle {
+  .menuToggle {
     background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
   }
 
-  .menu-toggle span {
+  .menuToggle span {
     display: block;
     width: 24px;
     height: 2px;
@@ -293,7 +293,7 @@
     transition: 0.3s;
   }
 
-  .close-menu {
+  .closeMenu {
     display: block;
     position: absolute;
     top: 20px;
