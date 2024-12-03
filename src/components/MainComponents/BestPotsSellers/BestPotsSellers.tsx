@@ -1,47 +1,13 @@
 import React from "react";
 import styles from "./BestPotsSellers.module.css";
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  isSoldOut?: boolean;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "MACETA ALICE NATURAL",
-    price: 15.95,
-    image: "/images/macetas/maceta-alice.jpg",
-  },
-  {
-    id: 2,
-    name: "MACETA AURA VERDE DARK",
-    price: 12.95,
-    image: "/images/macetas/maceta-aura-verde.jpg",
-  },
-  {
-    id: 3,
-    name: "MACETA AURA TERRACOTA",
-    price: 12.95,
-    image: "/images/macetas/maceta-aura-terracota.jpg",
-  },
-  {
-    id: 4,
-    name: "MACETA CUBO",
-    price: 13.95,
-    image: "/images/macetas/maceta-cubo.jpg",
-  },
-];
+import { bestPotSellerProducts } from "../../../data/best-pots-sellers";
 
 const BestPotsSellers: React.FC = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>NUESTRAS MACETAS MÁS TOP</h2>
       <div className={styles.grid}>
-        {products.map((product) => (
+        {bestPotSellerProducts.map((product) => (
           <div key={product.id} className={styles.card}>
             {product.isSoldOut && (
               <span className={styles.soldOutBadge}>AGOTADO</span>

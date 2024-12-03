@@ -1,48 +1,14 @@
 import React from "react";
 import styles from "./BestSellers.module.css";
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  isSoldOut?: boolean;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "ARECA",
-    price: 239.95,
-    image: "/images/plantas/areca.png",
-  },
-  {
-    id: 2,
-    name: "PACK AHORRO 2X SANSEVIERIA",
-    price: 424.95,
-    image: "/images/plantas/sansevieria.jpg",
-  },
-  {
-    id: 3,
-    name: "FICUS ROBUSTA GRANDE",
-    price: 459.95,
-    image: "/images/plantas/ficus-robusta.png",
-  },
-  {
-    id: 4,
-    name: "FICUS LYRATA",
-    price: 349.95,
-    image: "/images/plantas/ficus-lyrata.jpg",
-    isSoldOut: true,
-  },
-];
+import type { Product } from "../../../data/best-sellers";
+import { bestSellerProducts } from "../../../data/best-sellers";
 
 const BestSellers: React.FC = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>PLANTAS MÁS VENDIDAS</h2>
       <div className={styles.grid}>
-        {products.map((product) => (
+        {bestSellerProducts.map((product) => (
           <div key={product.id} className={styles.card}>
             {product.isSoldOut && (
               <span className={styles.soldOutBadge}>AGOTADO</span>
