@@ -35,7 +35,7 @@ export const plantasPocaLuz: Product[] = [
     id: 6,
     name: "FICUS ROBUSTA GRANDE",
     price: 462,
-    image: "/images/plantas/poca-luz/ficus-robusta-grande.jpg",
+    image: "/images/plantas/poca-luz/ficus-robusta-grande.png",
   },
   {
     id: 7,
@@ -57,24 +57,18 @@ export const plantasPocaLuz: Product[] = [
   },
   {
     id: 10,
-    name: "FICUS ELASTICA",
-    price: 351,
-    image: "/images/plantas/poca-luz/ficus-elastica.jpg",
-  },
-  {
-    id: 11,
     name: "DRACAENA COMPACTA L",
     price: 332,
     image: "/images/plantas/poca-luz/dracaena-compacta-l.jpg",
   },
   {
-    id: 12,
+    id: 11,
     name: "DRACAENA COMPACTA S",
     price: 332,
     image: "/images/plantas/poca-luz/dracaena-compacta-s.jpg",
   },
   {
-    id: 13,
+    id: 12,
     name: "SANSEVIERIA CYLINDRICA",
     price: 332,
     image: "/images/plantas/poca-luz/sansevieria-cylindrica.jpg",

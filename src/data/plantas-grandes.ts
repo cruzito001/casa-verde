@@ -23,13 +23,13 @@ export const plantasGrandes: Product[] = [
     id: 4,
     name: "FICUS ROBUSTA GRANDE",
     price: 462,
-    image: "/images/plantas/grandes/ficus-robusta-grande.jpg",
+    image: "/images/plantas/grandes/ficus-robusta-grande.png",
   },
   {
     id: 5,
     name: "ARECA",
     price: 240,
-    image: "/images/plantas/grandes/areca.jpg",
+    image: "/images/plantas/grandes/areca.png",
   },
   {
     id: 6,

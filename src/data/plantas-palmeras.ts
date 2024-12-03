@@ -5,7 +5,7 @@ export const plantasPalmeras: Product[] = [
     id: 1,
     name: "ARECA",
     price: 12.95,
-    image: "/images/plantas/palmeras/areca.jpg",
+    image: "/images/plantas/palmeras/areca.png",
   },
   {
     id: 2,
@@ -65,6 +65,6 @@ export const plantasPalmeras: Product[] = [
     id: 11,
     name: "PACK AHORRO PLANTAS PURIFICADORAS DE AIRE",
     price: 29.95,
-    image: "/images/plantas/palmeras/pack-purificadoras.jpg",
+    image: "/images/plantas/palmeras/pack-purificadoras.png",
   },
 ];
