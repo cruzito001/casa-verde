@@ -29,7 +29,7 @@ export const plantasFaciles: Product[] = [
     id: 5,
     name: "ALOE VERA",
     price: 314,
-    image: "/images/plantas/faciles/aloe-vera.jpg",
+    image: "/images/plantas/faciles/aloe-vera.png",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ export const plantasFaciles: Product[] = [
     id: 8,
     name: "ARECA",
     price: 240,
-    image: "/images/plantas/faciles/areca.jpg",
+    image: "/images/plantas/faciles/areca.png",
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ export const plantasFaciles: Product[] = [
     id: 12,
     name: "CALATHEA MAUI QUEEN",
     price: 368,
-    image: "/images/plantas/faciles/calathea-maui-queen.jpg",
+    image: "/images/plantas/faciles/calathea-maui-queen.png",
     isSoldOut: true,
   },
   {

@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InteriorHeader from '../../components/InteriorComponents/InteriorHeader';
+import ProductGrid from '../../components/CatalogComponents/ProductGrid';
+import { plantasFaciles } from '../../data/plantas-faciles';
+import { plantasGrandes } from '../../data/plantas-grandes';
+import { plantasPocaLuz } from '../../data/plantas-poca-luz';
+import { plantasPalmeras } from '../../data/plantas-palmeras';
+
+const allPlants = [...plantasFaciles, ...plantasGrandes, ...plantasPocaLuz, ...plantasPalmeras];
+---
+
+<Layout 
+  title="Plantas de Interior - Casa Verde" 
+  description="Explora nuestra colección de plantas de interior en Casa Verde. Encuentra la planta perfecta para tu hogar."
+>
+  <InteriorHeader client:load />
+  <div class="container">
+    <h2 class="title">PLANTAS DE INTERIOR</h2>
+    <ProductGrid products={allPlants} client:load />
+  </div>
+</Layout>
+
+<style>
+  .container {
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: "Bebas-Title", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 2rem 1rem;
+    }
+  }
+</style>
+

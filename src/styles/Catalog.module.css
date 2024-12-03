@@ -1,0 +1,90 @@
+.catalogContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sectionTitle {
+  font-family: "Bebas-Title", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.productCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.productImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.productInfo {
+  padding: 1rem;
+}
+
+.productName {
+  font-family: "Bebas-Title", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.productPrice {
+  font-family: "Bebas-Text", sans-serif;
+  font-size: 1.1rem;
+  color: #2e8b57;
+  margin-bottom: 1rem;
+}
+
+.addToCartBtn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Bebas-Text", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: #236b43;
+}
+
+.addToCartBtn.soldOut {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

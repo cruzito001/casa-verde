@@ -18,7 +18,7 @@ const menuItems: MenuItem[] = [
     name: "INTERIOR",
     url: "/interior",
     subItems: [
-      { name: "TODAS INTERIOR", url: "/interior/todas" },
+      { name: "TODAS INTERIOR", url: "/interior" },
       { name: "FÁCILES", url: "/interior/faciles" },
       { name: "GRANDES", url: "/interior/grandes" },
       { name: "POCA LUZ", url: "/interior/poca-luz" },
