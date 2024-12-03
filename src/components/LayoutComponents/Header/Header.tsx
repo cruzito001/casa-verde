@@ -19,11 +19,9 @@ const menuItems: MenuItem[] = [
     url: "/interior",
     subItems: [
       { name: "TODAS INTERIOR", url: "/interior/todas" },
-      { name: "MÁS VENDIDAS", url: "/interior/mas-vendidas" },
       { name: "FÁCILES", url: "/interior/faciles" },
       { name: "GRANDES", url: "/interior/grandes" },
       { name: "POCA LUZ", url: "/interior/poca-luz" },
-      { name: "PET-FRIENDLY", url: "/interior/pet-friendly" },
       { name: "PALMERAS", url: "/interior/palmeras" },
     ],
   },

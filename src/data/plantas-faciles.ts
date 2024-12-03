@@ -1,0 +1,126 @@
+import type { Product } from "./best-sellers";
+
+export const plantasFaciles: Product[] = [
+  {
+    id: 1,
+    name: "MONSTERA DELICIOSA",
+    price: 425,
+    image: "/images/plantas/faciles/monstera-deliciosa.jpg",
+  },
+  {
+    id: 2,
+    name: "DRACAENA MARGINATA",
+    price: 314,
+    image: "/images/plantas/faciles/dracaena-marginata.jpg",
+  },
+  {
+    id: 3,
+    name: "POTHOS CON TUTOR",
+    price: 573,
+    image: "/images/plantas/faciles/pothos-tutor.jpg",
+  },
+  {
+    id: 4,
+    name: "ZAMIOCULCAS ZAMIIFOLIA",
+    price: 369,
+    image: "/images/plantas/faciles/zamioculcas.jpg",
+  },
+  {
+    id: 5,
+    name: "ALOE VERA",
+    price: 314,
+    image: "/images/plantas/faciles/aloe-vera.jpg",
+  },
+  {
+    id: 6,
+    name: "ANTHURIUM BLANCO",
+    price: 351,
+    image: "/images/plantas/faciles/anthurium-blanco.jpg",
+  },
+  {
+    id: 7,
+    name: "ANTHURIUM ROJO",
+    price: 351,
+    image: "/images/plantas/faciles/anthurium-rojo.jpg",
+  },
+  {
+    id: 8,
+    name: "ARECA",
+    price: 240,
+    image: "/images/plantas/faciles/areca.jpg",
+  },
+  {
+    id: 9,
+    name: "BEAUCARNEA RECURVATA | PATA DE ELEFANTE",
+    price: 850,
+    image: "/images/plantas/faciles/beaucarnea-recurvata.jpg",
+  },
+  {
+    id: 10,
+    name: "CACTUS NAVIDAD",
+    price: 258,
+    image: "/images/plantas/faciles/cactus-navidad.jpg",
+  },
+  {
+    id: 11,
+    name: "CALATHEA LOUISAE",
+    price: 368,
+    image: "/images/plantas/faciles/calathea-louisae.jpg",
+    isSoldOut: true,
+  },
+  {
+    id: 12,
+    name: "CALATHEA MAUI QUEEN",
+    price: 368,
+    image: "/images/plantas/faciles/calathea-maui-queen.jpg",
+    isSoldOut: true,
+  },
+  {
+    id: 13,
+    name: "CROTON",
+    price: 369,
+    image: "/images/plantas/faciles/croton.jpg",
+  },
+  {
+    id: 14,
+    name: "DIEFFENBACHIA CAMILLA",
+    price: 332,
+    image: "/images/plantas/faciles/dieffenbachia-camilla.jpg",
+  },
+  {
+    id: 15,
+    name: "DIEFFENBACHIA EXÓTICA",
+    price: 332,
+    image: "/images/plantas/faciles/dieffenbachia-exotica.jpg",
+  },
+  {
+    id: 16,
+    name: "DIEFFENBACHIA VESUBIO",
+    price: 425,
+    image: "/images/plantas/faciles/dieffenbachia-vesubio.jpg",
+  },
+  {
+    id: 17,
+    name: "DRACAENA COMPACTA L",
+    price: 332,
+    image: "/images/plantas/faciles/dracaena-compacta-l.jpg",
+  },
+  {
+    id: 18,
+    name: "DRACAENA COMPACTA M",
+    price: 665,
+    image: "/images/plantas/faciles/dracaena-compacta-m.jpg",
+  },
+  {
+    id: 19,
+    name: "DRACAENA COMPACTA S",
+    price: 332,
+    image: "/images/plantas/faciles/dracaena-compacta-s.jpg",
+  },
+  {
+    id: 20,
+    name: "DRACAENA COMPACTA XL",
+    price: 1239,
+    image: "/images/plantas/faciles/dracaena-compacta-xl.jpg",
+  },
+];
