@@ -37,6 +37,10 @@
   background-image: url("/images/header-exterior.png");
 }
 
+.macetasHeader {
+  background-image: url("/images/header-macetas.jpg");
+}
+
 @media (max-width: 768px) {
   .header {
     height: 60vh;

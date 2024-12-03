@@ -1,0 +1,486 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Leaf, Users, Heart, Sprout, TreeDeciduous, Flower2, Coffee, ShoppingCart, User2, Award, BookOpen } from 'lucide-react';
+---
+
+<Layout 
+title="Sobre Nosotros - Casa Verde" 
+description="Conoce más sobre Casa Verde, tu tienda de plantas de confianza desde 2010."
+>
+<main class="about-content">
+  <section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Sobre <span class="accent">Casa Verde</span></h1>
+      <p class="subtitle">Cultivando vida y belleza desde 2010</p>
+    </div>
+    <div class="hero-decoration">
+      <Leaf className="hero-icon" />
+    </div>
+  </div>
+</section>
+
+  <section class="mission">
+  <h2>Nuestra Misión</h2>
+  <div class="mission-grid">
+    <div class="mission-card">
+      <Leaf className="mission-icon" />
+      <h3>Naturaleza en el Hogar</h3>
+      <p>Llevamos la belleza y los beneficios de la naturaleza a hogares y espacios de trabajo.</p>
+    </div>
+    <div class="mission-card">
+      <Award className="mission-icon" />
+      <h3>Calidad Superior</h3>
+      <p>Ofrecemos plantas de la más alta calidad y asesoramiento experto para su cuidado.</p>
+    </div>
+    <div class="mission-card">
+      <Sprout className="mission-icon" />
+      <h3>Vida Sostenible</h3>
+      <p>Fomentamos un estilo de vida más verde y sostenible a través de nuestros productos.</p>
+    </div>
+    <div class="mission-card">
+      <BookOpen className="mission-icon" />
+      <h3>Educación Botánica</h3>
+      <p>Educamos sobre los beneficios de las plantas para la salud y el bienestar.</p>
+    </div>
+  </div>
+  <p class="mission-statement">Nuestra pasión por las plantas se traduce en un compromiso inquebrantable con la calidad y el servicio al cliente, asegurando que cada interacción con Casa Verde sea una experiencia enriquecedora.</p>
+</section>
+
+  <section class="values">
+    <h2>Nuestros Valores</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <Leaf className="value-icon" />
+        <h3>Sostenibilidad</h3>
+        <p>Nos comprometemos a utilizar prácticas sostenibles en todos los aspectos de nuestro negocio.</p>
+      </div>
+      <div class="value-card">
+        <Sprout className="value-icon" />
+        <h3>Calidad</h3>
+        <p>Seleccionamos cuidadosamente cada planta para asegurar que nuestros clientes reciban solo lo mejor.</p>
+      </div>
+      <div class="value-card">
+        <Users className="value-icon" />
+        <h3>Comunidad</h3>
+        <p>Fomentamos una comunidad de amantes de las plantas, compartiendo conocimientos y experiencias.</p>
+      </div>
+      <div class="value-card">
+        <Heart className="value-icon" />
+        <h3>Pasión</h3>
+        <p>Nuestro amor por las plantas impulsa todo lo que hacemos, desde la selección hasta el asesoramiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <h2>Nuestra Historia</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <ShoppingCart />
+        </div>
+        <div class="timeline-content">
+          <h3>2010</h3>
+          <p>Casa Verde nace como una pequeña tienda local en el corazón de la ciudad.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <Flower2 />
+        </div>
+        <div class="timeline-content">
+          <h3>2015</h3>
+          <p>Expandimos nuestro catálogo para incluir plantas exóticas y de interior.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <TreeDeciduous />
+        </div>
+        <div class="timeline-content">
+          <h3>2018</h3>
+          <p>Lanzamos nuestra tienda online para llegar a más hogares en todo el país.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <Users />
+        </div>
+        <div class="timeline-content">
+          <h3>2023</h3>
+          <p>Nos convertimos en líderes del mercado, con un compromiso renovado con la sostenibilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Nuestro Equipo</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <User2 className="team-icon" />
+        <h3>María González</h3>
+        <p>Fundadora y CEO</p>
+      </div>
+      <div class="team-member">
+        <TreeDeciduous className="team-icon" />
+        <h3>Carlos Rodríguez</h3>
+        <p>Experto en Botánica</p>
+      </div>
+      <div class="team-member">
+        <Flower2 className="team-icon" />
+        <h3>Laura Sánchez</h3>
+        <p>Diseñadora de Interiores</p>
+      </div>
+      <div class="team-member">
+        <Coffee className="team-icon" />
+        <h3>Javier López</h3>
+        <p>Especialista en Atención al Cliente</p>
+      </div>
+    </div>
+  </section>
+</main>
+</Layout>
+
+<style>
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 6rem 2rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: "Bebas-Title", sans-serif;
+  font-size: 5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.hero h1 .accent {
+  color: #2e8b57;
+  display: block;
+  font-size: 6rem;
+}
+
+.hero .subtitle {
+  font-family: "Bebas-Text", sans-serif;
+  font-size: 2rem;
+  color: #666;
+  max-width: 600px;
+}
+
+.hero-decoration {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.hero-icon {
+  width: 400px;
+  height: 400px;
+  color: #2e8b57;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero h1 .accent {
+    font-size: 4rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-family: "Bebas-Title", sans-serif;
+  font-size: 2.5rem;
+  color: #2e8b57;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mission-content {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.mission-text li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.mission-text li::before {
+  content: '🌿';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.mission-text p:last-child {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: #2e8b57;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #2e8b57;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 2rem;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid #2e8b57;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e8b57;
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+  right: -20px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -20px;
+}
+
+.timeline-content {
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  font-family: "Bebas-Title", sans-serif;
+  color: #2e8b57;
+  margin-bottom: 0.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-icon {
+  width: 80px;
+  height: 80px;
+  color: #2e8b57;
+  margin-bottom: 1rem;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mission-card {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mission-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: #2e8b57;
+}
+
+.mission-card h3 {
+  font-family: "Bebas-Title", sans-serif;
+  font-size: 1.5rem;
+  color: #2e8b57;
+  margin-bottom: 1rem;
+}
+
+.mission-card p {
+  font-family: "Bebas-Text", sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+
+.mission-statement {
+  font-family: "Bebas-Text", sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .mission-content {
+    flex-direction: column;
+  }
+
+  .mission-image {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-icon {
+    left: 0 !important;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+

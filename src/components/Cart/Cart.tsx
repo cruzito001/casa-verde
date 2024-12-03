@@ -28,7 +28,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
     {
       id: 2,
       name: "MACETA ALICE NATURAL",
-      price: 15.95,
+      price: 319,
       quantity: 2,
       image: "/images/macetas/maceta-alice.jpg",
     },

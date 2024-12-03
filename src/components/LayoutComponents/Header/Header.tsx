@@ -30,8 +30,7 @@ const menuItems: MenuItem[] = [
     name: "MACETAS",
     url: "/macetas",
     subItems: [
-      { name: "TODAS", url: "/macetas/todas" },
-      { name: "MÁS VENDIDAS", url: "/macetas/mas-vendidas" },
+      { name: "TODAS", url: "/macetas" },
       { name: "YUTE", url: "/macetas/yute" },
       { name: "TERRACOTA", url: "/macetas/terracota" },
     ],

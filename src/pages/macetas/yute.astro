@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MacetasHeader from '../../components/HeaderComponents/MacetasHeader';
+import ProductGrid from '../../components/CatalogComponents/ProductGrid';
+import { macetasYute } from '../../data/macetas-yute';
+---
+
+<Layout 
+  title="Macetas de Yute - Casa Verde" 
+  description="Descubre nuestra selección de macetas de yute en Casa Verde. Perfectas para añadir un toque natural a tu decoración."
+>
+  <MacetasHeader title="MACETAS DE YUTE" client:load />
+  <div class="catalogContainer">
+    <h2 class="sectionTitle">Nuestras Macetas de Yute</h2>
+    <ProductGrid products={macetasYute} client:load />
+  </div>
+</Layout>
+
+<style>
+  .catalogContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-family: "Bebas-Title", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  }
+</style>
+
