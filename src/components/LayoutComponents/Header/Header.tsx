@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
+import Cart from "../../Cart/Cart";
 
 interface SubMenuItem {
   name: string;
@@ -44,17 +45,29 @@ const menuItems: MenuItem[] = [
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState<string | null>(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isMenuOpen || isCartOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isCartOpen]);
+
+  useEffect(() => {
+    // Esto es solo para demostración. En una implementación real,
+    // el conteo se actualizaría basado en el estado real del carrito.
+    setCartItemCount(2);
+  }, []);
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleToggleCart = () => {
+    setIsCartOpen(!isCartOpen);
   };
 
   return (
@@ -105,7 +118,7 @@ const Header: React.FC = () => {
               <circle cx="12" cy="7" r="4" />
             </svg>
           </div>
-          <div className={styles.cartIcon}>
+          <div className={styles.cartIcon} onClick={handleToggleCart}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -119,6 +132,9 @@ const Header: React.FC = () => {
               <circle cx="20" cy="21" r="1" />
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
             </svg>
+            {cartItemCount > 0 && (
+              <span className={styles.cartBadge}>{cartItemCount}</span>
+            )}
           </div>
         </div>
       </div>
@@ -174,6 +190,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
+      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
   );
 };
