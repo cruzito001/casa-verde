@@ -38,7 +38,7 @@ const menuItems: MenuItem[] = [
     ],
   },
   { name: "KOKEDAMAS Y TERRARIOS", url: "/kokedamas-terrarios" },
-  { name: "PROFESIONALES", url: "/profesionales" },
+  { name: "ABOUT US", url: "/about-us" },
 ];
 
 const Header: React.FC = () => {
