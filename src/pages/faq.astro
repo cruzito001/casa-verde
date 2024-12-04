@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/FooterPages/PageHeader';
+---
+
+<Layout 
+  title="Preguntas Frecuentes - Casa Verde" 
+  description="Encuentra respuestas a las preguntas más comunes sobre nuestros productos y servicios en Casa Verde."
+>
+  <PageHeader title="Preguntas Frecuentes" client:load />
+  <main class="content">
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Cómo elijo la planta adecuada para mi hogar?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Considera factores como la luz disponible, el espacio y tu nivel de experiencia en el cuidado de plantas. Nuestro equipo está disponible para asesorarte en la elección perfecta.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Con qué frecuencia debo regar mis plantas?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>La frecuencia de riego varía según la especie de la planta y las condiciones ambientales. En general, es mejor regar cuando la capa superior del suelo esté seca al tacto.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué hago si mi planta tiene plagas?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Identifica la plaga y trata la planta con un insecticida adecuado. Aísla la planta afectada para evitar que la plaga se propague a otras plantas.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Cómo puedo hacer que mis plantas crezcan más rápido?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Asegúrate de proporcionar las condiciones óptimas de luz, agua y nutrientes. Un fertilizante equilibrado durante la temporada de crecimiento puede ayudar.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Puedo devolver una planta si no estoy satisfecho?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sí, ofrecemos una garantía de satisfacción de 30 días. Consulta nuestra política de devoluciones para más detalles.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Ofrecen servicios de mantenimiento de plantas?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Actualmente no ofrecemos servicios de mantenimiento, pero proporcionamos guías detalladas de cuidado con cada planta que vendemos.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border: none;
+    font-family: "Bebas-Title", sans-serif;
+    font-size: 1.2rem;
+    color: #2e8b57;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  .faq-question:hover {
+    background-color: #e8f5e9;
+  }
+  .faq-question .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  .faq-answer {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  .faq-answer p {
+    margin: 0;
+    padding: 1rem 0;
+  }
+  .faq-item.active .faq-question {
+    background-color: #e8f5e9;
+  }
+  .faq-item.active .faq-question .icon {
+    transform: rotate(45deg);
+  }
+  .faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 1rem;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll<HTMLElement>('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector<HTMLElement>('.faq-question');
+      if (!question) return; // Skip if question element not found
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle active state for clicked item
+        item.classList.toggle('active', !isActive);
+      });
+    });
+  });
+</script>
+
