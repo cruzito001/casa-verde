@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Cart from "../../Cart/Cart";
+import { getCartItemsCount } from "../../../utils/cartUtils";
 
 interface SubMenuItem {
   name: string;
@@ -46,18 +47,25 @@ const Header: React.FC = () => {
   const [cartItemCount, setCartItemCount] = useState(0);
 
   useEffect(() => {
+    const updateCartCount = () => {
+      setCartItemCount(getCartItemsCount());
+    };
+
+    updateCartCount();
+    window.addEventListener("cartUpdated", updateCartCount);
+
+    return () => {
+      window.removeEventListener("cartUpdated", updateCartCount);
+    };
+  }, []);
+
+  useEffect(() => {
     if (isMenuOpen || isCartOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
   }, [isMenuOpen, isCartOpen]);
-
-  useEffect(() => {
-    // Esto es solo para demostración. En una implementación real,
-    // el conteo se actualizaría basado en el estado real del carrito.
-    setCartItemCount(2);
-  }, []);
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false);

@@ -23,17 +23,27 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .cartTitle {
   font-family: "Bebas-Title", sans-serif;
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .closeButton {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0.5rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #333;
 }
 
 .emptyCart {
@@ -43,6 +53,7 @@
   justify-content: center;
   height: 100%;
   color: #666;
+  gap: 1rem;
 }
 
 .cartItems {
@@ -50,6 +61,7 @@
   padding: 0;
   margin: 0;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .cartItem {
@@ -63,10 +75,13 @@
   height: 80px;
   object-fit: cover;
   margin-right: 1rem;
+  border-radius: 4px;
 }
 
 .itemInfo {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .itemName {
@@ -82,9 +97,17 @@
   margin: 0 0 0.5rem 0;
 }
 
+.itemActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
 .quantityControl {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .quantityButton {
@@ -92,23 +115,99 @@
   border: 1px solid #e0e0e0;
   padding: 0.25rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.quantityButton:hover {
+  background-color: #f5f5f5;
 }
 
 .quantity {
   padding: 0 0.5rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.removeButton:hover {
+  color: #dc3545;
 }
 
 .cartFooter {
   margin-top: auto;
   padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.promoCode {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.promoInput {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: "Bebas-Text", sans-serif;
+}
+
+.promoButton {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Bebas-Text", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.promoButton:hover {
+  background-color: #2e8b57;
+}
+
+.promoError {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin: -0.5rem 0 1rem;
+}
+
+.promoApplied {
+  color: #2e8b57;
+  font-size: 0.875rem;
+  margin: -0.5rem 0 1rem;
+}
+
+.cartSummary {
+  margin-bottom: 1rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-family: "Bebas-Text", sans-serif;
 }
 
 .total {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Bebas-Text", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
 }
 
 .checkoutButton {
@@ -121,6 +220,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .checkoutButton:hover {
@@ -129,6 +229,14 @@
 
 @media (max-width: 768px) {
   .cartOverlay {
+    width: 100%;
+  }
+
+  .promoCode {
+    flex-direction: column;
+  }
+
+  .promoButton {
     width: 100%;
   }
 }

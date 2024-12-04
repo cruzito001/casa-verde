@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ProductDetails.module.css";
 import { ShoppingCart } from "lucide-react";
+import { addToCart } from "../../utils/cartUtils";
 
 interface ProductDetailsProps {
   product: {
@@ -14,6 +15,10 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
+
   return (
     <div className={styles.productContainer}>
       <div className={styles.productImage}>
@@ -34,7 +39,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           <p>{product.description}</p>
         </div>
         <div className={styles.actionButtons}>
-          <button className={styles.addToCartButton}>
+          <button className={styles.addToCartButton} onClick={handleAddToCart}>
             <ShoppingCart size={20} />
             Añadir al carrito
           </button>
