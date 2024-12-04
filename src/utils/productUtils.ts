@@ -11,7 +11,6 @@ import { kokedamas } from "../data/kokedamas";
 import { terrarios } from "../data/terrarios";
 import type { Product } from "../data/best-sellers";
 
-// Combine all products with unique IDs
 const allProducts = [
   ...bestSellerProducts,
   ...bestPotSellerProducts,
@@ -50,12 +49,10 @@ export const getRelatedProducts = async (id: number): Promise<Product[]> => {
   const product = await getProductById(id);
   if (!product) return [];
 
-  // Get products from the same category
   const relatedProducts = allProducts.filter(
     (p) => p.id !== id && p.category === product.category
   );
 
-  // If not enough products from same category, add some from other categories
   if (relatedProducts.length < 4) {
     const otherProducts = allProducts.filter(
       (p) => p.id !== id && p.category !== product.category
@@ -64,4 +61,13 @@ export const getRelatedProducts = async (id: number): Promise<Product[]> => {
   }
 
   return relatedProducts.slice(0, 4);
+};
+
+export const getBestSellerPlants = (count: number): Product[] => {
+  return plantasFaciles.slice(0, count);
+};
+
+export const getBestSellerPots = (count: number): Product[] => {
+  const allPots = [...macetasYute, ...macetasTerracota];
+  return allPots.slice(0, count);
 };

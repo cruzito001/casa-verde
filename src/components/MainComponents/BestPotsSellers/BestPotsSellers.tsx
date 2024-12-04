@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./BestPotsSellers.module.css";
-import { bestPotSellerProducts } from "../../../data/best-pots-sellers";
+import { getBestSellerPots } from "../../../utils/productUtils";
 
 const BestPotsSellers: React.FC = () => {
+  const bestPotSellerProducts = getBestSellerPots(4);
+
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>NUESTRAS MACETAS MÁS TOP</h2>
@@ -13,22 +15,24 @@ const BestPotsSellers: React.FC = () => {
               <span className={styles.soldOutBadge}>AGOTADO</span>
             )}
             <div className={styles.imageContainer}>
-              <img
-                src={product.image}
-                alt={product.name}
-                className={styles.image}
-              />
+              <a href={`/producto/${product.id}`}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className={styles.image}
+                />
+              </a>
             </div>
             <div className={styles.info}>
               <h3 className={styles.name}>{product.name}</h3>
               <div>
-                <p className={styles.price}>${product.price.toFixed(2)}</p>
-                <button
+                <p className={styles.price}>MX${product.price.toFixed(2)}</p>
+                <a
+                  href={`/producto/${product.id}`}
                   className={`${styles.addToCartBtn} ${product.isSoldOut ? styles.soldOut : ""}`}
-                  disabled={product.isSoldOut}
                 >
-                  {product.isSoldOut ? "Agotado" : "Añadir al carrito"}
-                </button>
+                  {product.isSoldOut ? "AGOTADO" : "VER DETALLES"}
+                </a>
               </div>
             </div>
           </div>

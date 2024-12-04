@@ -2,7 +2,7 @@ import type { Product } from "./best-sellers";
 
 export const bestPotSellerProducts: Product[] = [
   {
-    id: 1,
+    id: 1001,
     name: "MACETA ALICE NATURAL",
     price: 319,
     image: "/images/macetas/maceta-alice.jpg",
@@ -11,7 +11,7 @@ export const bestPotSellerProducts: Product[] = [
     category: "Macetas de Interior",
   },
   {
-    id: 2,
+    id: 1002,
     name: "MACETA AURA VERDE DARK",
     price: 259,
     image: "/images/macetas/maceta-aura-verde.jpg",
@@ -20,7 +20,7 @@ export const bestPotSellerProducts: Product[] = [
     category: "Macetas de Interior",
   },
   {
-    id: 3,
+    id: 1003,
     name: "MACETA AURA TERRACOTA",
     price: 259,
     image: "/images/macetas/maceta-aura-terracota.jpg",
@@ -29,7 +29,7 @@ export const bestPotSellerProducts: Product[] = [
     category: "Macetas de Interior",
   },
   {
-    id: 4,
+    id: 1004,
     name: "MACETA CUBO",
     price: 279,
     image: "/images/macetas/maceta-cubo.jpg",
