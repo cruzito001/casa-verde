@@ -266,13 +266,20 @@
     border-top: 1px solid #e0e0e0;
   }
 
-  .loginLink {
+  .loginButton {
     display: flex;
     align-items: center;
     gap: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: inherit;
   }
 
-  .loginLink svg {
+  .loginButton svg {
     width: 20px;
     height: 20px;
   }

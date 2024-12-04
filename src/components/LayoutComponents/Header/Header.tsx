@@ -177,7 +177,7 @@ const Header: React.FC = () => {
             </li>
           ))}
           <li className={`${styles.mobileOnly} ${styles.loginItem}`}>
-            <a href="/login" className={styles.loginLink}>
+            <button className={styles.loginButton}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -191,7 +191,7 @@ const Header: React.FC = () => {
                 <circle cx="12" cy="7" r="4" />
               </svg>
               INICIAR SESIÓN
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
